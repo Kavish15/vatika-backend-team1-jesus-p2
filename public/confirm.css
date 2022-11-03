@@ -1,25 +1,32 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #74bc1e;
   font-family: "Patrick Hand SC", cursive;
+  background-color: #ffeeef;
 }
 
 div {
+  background-image: url("https://res.cloudinary.com/ds4gbbc6g/image/upload/v1667508580/Vatika/React%20FrontEnd/OrderConfirm_qvs4wi.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
   text-align: center;
-  color: white;
-  margin-top: 20%;
+  margin-left: 20%;
+  border-radius:1rem;
 }
 
 a {
-  color: red;
+  position:relative;
+  top:25rem;
+  bottom: 0px;
+  color: white;
   text-decoration: none;
-  border: 1px solid red;
-  padding: 5px;
+  background-color: #592f44;
+  transition: transform 0.3s;
+  padding: 5px 20px;
   border-radius: 0.2rem;
 }
 
-a:hover{
-    background-color: red;
-    color:white
+a:hover {
+  transform: scale(1.1);
 }
