@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #74bc1e;
+  font-family: "Patrick Hand SC", cursive;
+}
+
+div {
+  text-align: center;
+  color: white;
+  margin-top: 20%;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 0.2rem;
+}
+
+a:hover{
+    background-color: red;
+    color:white
+}
