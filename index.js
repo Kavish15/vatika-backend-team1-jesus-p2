@@ -7,7 +7,7 @@ const path =require("path");
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://vatika.netlify.app",
+    origin: ["https://vatika.netlify.app","https://vatika.online"],
     methods: ["GET", "POST", "DELETE"],
   })
 );
