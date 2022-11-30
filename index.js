@@ -3,11 +3,15 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
 const bodyParser = require("body-parser");
-const path =require("path");
+const path = require("path");
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["https://vatika.netlify.app","https://vatika.online"],
+    origin: [
+      "https://vatika.netlify.app",
+      "https://vatika.online",
+      "http://localhost:3000",
+    ],
     methods: ["GET", "POST", "DELETE"],
   })
 );
@@ -30,8 +34,7 @@ mongoose.connect(process.env.DB_URL, () => {
 //Middleware
 app.use(express.json()); //this is to accept data in JSON Format
 app.use(bodyParser.urlencoded({ extended: true })); //this is to decode the data sent from FrontEnd
-app.use(express.static(path.join(__dirname,"public")));
-
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", orderhistoryRouter); //orderhistoryRoute Middleware
 app.use("/", productRouter); //addProductRoute Middleware
@@ -49,12 +52,12 @@ app.get("/", (req, res) => {
 
 //Confirmation
 app.post("/confirmation", (req, res) => {
-  res.status(200).sendFile(path.join(__dirname,"public","confirm.html"));
+  res.status(200).sendFile(path.join(__dirname, "public", "confirm.html"));
 });
 
 //Listening to Port
-const server=app.listen(process.env.PORT || 5000, () => {
+const server = app.listen(process.env.PORT || 5000, () => {
   console.log("Server Started");
 });
 
-module.exports=server;
+module.exports = server;
